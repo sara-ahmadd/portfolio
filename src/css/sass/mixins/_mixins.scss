@@ -1,0 +1,95 @@
+@use "../global/_variables" as *;
+
+@mixin myMediaQueries($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin myKeyFrames($anim-name) {
+  @keyframes #{$anim-name} {
+    @content;
+  }
+  @-webkit-keyframes #{$anim-name} {
+    /*
+   @content :for this => not only the name is dynamically added but
+    also, the properties to be changed.
+    */
+    @content;
+  }
+}
+
+@mixin border-radius-10px {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@mixin border-radius-20px {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+@mixin transition-($num) {
+  transition: ($num) linear;
+  -webkit-transition: ($num) linear;
+  -moz-transition: ($num) linear;
+  -ms-transition: ($num) linear;
+  -o-transition: ($num) linear;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@mixin lets-talk-btn {
+  padding: 20px;
+  @include border-radius-10px;
+  border: 2px solid $text-color;
+  background-color: $text-bcg;
+  color: $text-color;
+  font-size: 20px;
+  @include transition-(0.3s);
+  &:hover {
+    background-color: transparent;
+    color: $white-color;
+  }
+}
+
+@mixin rotate-20 {
+  transform: rotateZ(20deg);
+  -webkit-transform: rotateZ(20deg);
+  -moz-transform: rotateZ(20deg);
+  -ms-transform: rotateZ(20deg);
+  -o-transform: rotateZ(20deg);
+}
+@mixin rotate-0 {
+  transform: rotateZ(-20deg);
+  -webkit-transform: rotateZ(-20deg);
+  -moz-transform: rotateZ(-20deg);
+  -ms-transform: rotateZ(-20deg);
+  -o-transform: rotateZ(-20deg);
+}
+
+@mixin blur-effect {
+  backdrop-filter: blur(6px);
+}

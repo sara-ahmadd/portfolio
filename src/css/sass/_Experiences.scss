@@ -1,0 +1,70 @@
+@use "./mixins/mixins" as *;
+@use "./global/variables" as *;
+@use "./global/global-rules" as *;
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  .content {
+    @include flex-center;
+
+    padding: 30px 0;
+    @include myMediaQueries(medium) {
+      flex-direction: column;
+      width: 100%;
+    }
+    @include myMediaQueries(small) {
+      flex-direction: column;
+      width: 100%;
+    }
+    @include myMediaQueries(mobile) {
+      flex-direction: column;
+      width: 100%;
+    }
+    .front-end,
+    .back-end {
+      background-color: $text-bcg;
+      @include border-radius-10px;
+      padding: 10px;
+      flex: 1;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        color: $main-color;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 300px));
+        grid-auto-rows: max-content;
+        gap: 20px;
+        @include myMediaQueries(small) {
+          grid-template-columns: minmax(100px, 300px);
+        }
+        @include myMediaQueries(mobile) {
+          grid-template-columns: minmax(100px, 300px);
+        }
+        .skill {
+          padding-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .skill-title {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: flex-end;
+
+            i {
+              font-size: 30px;
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

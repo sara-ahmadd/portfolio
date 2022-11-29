@@ -1,0 +1,54 @@
+@use "./sass/_About.scss";
+@use "./sass/_Contact";
+@use "./sass/_Experiences";
+@use "./sass/_Footer";
+@use "./sass/_Header";
+@use "./sass/_Navbar";
+@use "./sass/_Portfolio";
+@use "./sass/_Services";
+@use "./sass/_Testimonials";
+@use "./sass/mixins/_mixins" as *;
+@use "./sass/global/_variables" as *;
+@use "./sass/global/global-rules" as *;
+
+body {
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",    sans-serif;
+  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: $background-color !important;
+  line-height: 2 !important;
+  // background-image: url("../../assets/bg-texture.png");
+  color: $white-color !important;
+}
+
+code {
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace; */
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.App {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: $container-width-lg;
+  text-align: center;
+  margin: 0 auto;
+  @include myMediaQueries(large) {
+    width: $container-width-lg;
+  }
+  @include myMediaQueries(medium) {
+    width: $container-width-md;
+  }
+  @include myMediaQueries(small) {
+    width: $container-width-sm;
+  }
+  @include myMediaQueries(mobile) {
+    width: $container-width-xs;
+    padding: 10px;
+  }
+}

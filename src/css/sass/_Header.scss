@@ -1,0 +1,93 @@
+@use "./mixins/mixins" as *;
+@use "./global/variables" as *;
+@use "./global/global-rules" as *;
+
+.header {
+  padding: 30px 0 0 0;
+  max-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  .txt {
+    padding-top: 40px;
+    h4 {
+      color: $dim-white-color;
+    }
+    h1 {
+      color: $white-color;
+    }
+  }
+  .btns-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    .btn {
+      @include lets-talk-btn;
+    }
+  }
+  @include myKeyFrames(top-to-bottom) {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 10%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  .img {
+    width: 35rem;
+    height: 35rem;
+    margin: 0 auto;
+    position: relative;
+
+    @include myMediaQueries(small) {
+      width: 100%;
+    }
+    @include myMediaQueries(mobile) {
+      width: 100%;
+      height: 300px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      animation: top-to-bottom 3s linear infinite;
+      -webkit-animation: top-to-bottom 3s linear infinite;
+    }
+  }
+  .social {
+    position: fixed;
+    left: 1%;
+    padding: 10px;
+    @include border-radius-10px;
+    background-color: $text-bcg;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    top: 40%;
+    @include myMediaQueries(small) {
+      display: none;
+    }
+    @include myMediaQueries(mobile) {
+      display: none;
+    }
+    i {
+      font-size: 40px;
+      @include transition-(0.3s);
+      &:hover {
+        color: $main-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
