@@ -1,68 +1,72 @@
 import React from "react";
 import "../css/main.css";
-import { BiBadgeCheck } from "react-icons/bi";
+import { Icon } from "@iconify/react";
+import html5 from "@iconify/icons-logos/html-5";
+import { DiCss3Full } from "react-icons/di";
+import { DiHtml5 } from "react-icons/di";
+
+import { DiJavascript1 } from "react-icons/di";
+import { DiReact } from "react-icons/di";
+import { DiBootstrap } from "react-icons/di";
+import { DiSass } from "react-icons/di";
+import { DiNodejsSmall } from "react-icons/di";
+import tailwindIcon from "../images/tailwind-logo.svg";
+import typescriptIcon from "../images/typescript-logo.svg";
+
+import { Zoom, Fade } from "react-awesome-reveal";
 
 const Experiences = () => {
   const skills = {
     front: [
-      { skill: "HTML", level: "Experienced" },
-      { skill: "CSS", level: "Experienced" },
-      { skill: "JavaScript", level: "Experienced" },
-      { skill: "ReactJs", level: "Experienced" },
-      { skill: "Bootstrap", level: "Experienced" },
-      { skill: "Tailwind", level: "Intermediate" },
-      { skill: "Sass(SCSS)", level: "Experienced" },
-    ],
-    back: [
-      { skill: "Node.js", level: "Basics" },
-      { skill: "PostgreSQL", level: "Basics" },
-      { skill: "TypeScript", level: "Basics" },
+      { skill: "HTML5", level: "Experienced", icon: <DiHtml5 /> },
+      { skill: "CSS3", level: "Experienced", icon: <DiCss3Full /> },
+      {
+        skill: "JavaScript(ES6)",
+        level: "Experienced",
+        icon: <DiJavascript1 />,
+      },
+      { skill: "ReactJs", level: "Experienced", icon: <DiReact /> },
+      { skill: "Bootstrap", level: "Experienced", icon: <DiBootstrap /> },
+      {
+        skill: "Tailwind",
+        level: "Intermediate",
+        icon: <img src={tailwindIcon} alt="img" />,
+      },
+      { skill: "Sass(SCSS)", level: "Experienced", icon: <DiSass /> },
+      {
+        skill: "TypeScript",
+        level: "Intermediate",
+        icon: <img src={typescriptIcon} alt="img" />,
+      },
+      { skill: "Node.js", level: "Basics", icon: <DiNodejsSmall /> },
     ],
   };
   return (
     <div className="container experience">
-      <h2>My Experience</h2>
+      <Fade direction="left">
+        <h2>My Experience</h2>
+      </Fade>
       <div className="content">
         <div className="front-end">
           <div className="title">
-            <h2>Front-end Development</h2>
+            <Fade direction="right">
+              <h2>Front-end Development</h2>
+            </Fade>
           </div>
           <div className="skills">
             {skills.front.map((x) => {
               return (
-                <div className="skill" key={x.skill}>
-                  <div className="skill-title">
-                    <i>
-                      <BiBadgeCheck />
-                    </i>
-                    <h3>{x.skill}</h3>
+                <Zoom direction="in" key={x.skill}>
+                  <div className="skill">
+                    <div className="skill-title">
+                      <i>{x.icon}</i>
+                      <h3>{x.skill}</h3>
+                    </div>
+                    <div className="text">
+                      <h5>{x.level}</h5>
+                    </div>
                   </div>
-                  <div className="text">
-                    <h5>{x.level}</h5>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="back-end">
-          <div className="title">
-            <h2>Back-end Development</h2>
-          </div>
-          <div className="skills">
-            {skills.back.map((x) => {
-              return (
-                <div className="skill" key={x.skill}>
-                  <div className="skill-title">
-                    <i>
-                      <BiBadgeCheck />
-                    </i>
-                    <h3>{x.skill}</h3>
-                  </div>
-                  <div className="text">
-                    <h5>{x.level}</h5>
-                  </div>
-                </div>
+                </Zoom>
               );
             })}
           </div>

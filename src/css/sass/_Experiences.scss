@@ -7,9 +7,13 @@
   flex-direction: column;
   height: 100%;
   gap: 20px;
+  h2 {
+    color: $text-color;
+  }
   .content {
-    @include flex-center;
-
+    // @include flex-center;
+    display: flex;
+    flex-direction: column;
     padding: 30px 0;
     @include myMediaQueries(medium) {
       flex-direction: column;
@@ -25,42 +29,72 @@
     }
     .front-end,
     .back-end {
-      background-color: $text-bcg;
-      @include border-radius-10px;
       padding: 10px;
       flex: 1;
       height: 500px;
       display: flex;
       flex-direction: column;
+      // background-color: $white-color-varient;
+
+      @include myMediaQueries(small) {
+        width: 100%;
+      }
+      @include myMediaQueries(mobile) {
+        width: 100%;
+      }
       h2 {
-        color: $main-color;
+        color: $white-color;
       }
       .skills {
         display: grid;
-        grid-template-columns: repeat(2, minmax(100px, 300px));
+        grid-template-columns: repeat(3, minmax(100px, 300px));
         grid-auto-rows: max-content;
-        gap: 20px;
+        gap: 3rem;
+        place-content: center;
+        @include myMediaQueries(medium) {
+          gap: 3rem;
+          grid-template-columns: repeat(2, minmax(100px, 300px));
+        }
         @include myMediaQueries(small) {
-          grid-template-columns: minmax(100px, 300px);
+          gap: 2rem;
+          grid-template-columns: repeat(2, minmax(100px, 300px));
         }
         @include myMediaQueries(mobile) {
           grid-template-columns: minmax(100px, 300px);
         }
         .skill {
-          padding-left: 20px;
+          padding: 20px;
+          @include border-radius-10px;
+          border: 2px solid $text-color;
+          background-color: $text-bcg;
+          color: $text-color;
+          font-size: 20px;
+          @include transition-(0.3s);
+          border: 2px solid transparent;
+          &:hover {
+            border: 2px solid $main-color;
+            @include transformY-10px;
+          }
+          background-color: $white-color-varient;
+          padding: 10px;
+          width: 20rem;
+          @include myMediaQueries(mobile) {
+            width: 18rem;
+          }
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
+          color: $dim-white-color;
           .skill-title {
             display: flex;
             justify-content: center;
             gap: 10px;
-            align-items: flex-end;
-
+            align-items: center;
             i {
-              font-size: 30px;
+              font-size: 2.5rem;
               color: $main-color;
+              @include flex-center;
             }
           }
         }

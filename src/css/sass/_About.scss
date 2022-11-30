@@ -21,6 +21,11 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  .title {
+    h2 {
+      color: $text-color;
+    }
+  }
   .about-content {
     @include flex-center;
     gap: 40px;
@@ -55,9 +60,14 @@
         @include flex-center;
         width: 100%;
         div {
-          background-color: $text-bcg;
           flex: 1;
-          @include border-radius-10px;
+          height: 15rem;
+          @include lets-talk-btn;
+          cursor: pointer;
+          border: 2px solid transparent;
+          &:hover {
+            border: 2px solid $main-color;
+          }
           i {
             padding: 10px;
             font-size: 30px;

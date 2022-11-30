@@ -1,3 +1,54 @@
 @use "./mixins/mixins" as *;
 @use "./global/variables" as *;
 @use "./global/global-rules" as *;
+
+.services {
+  text-align: center;
+  h2 {
+    padding-top: 30px;
+    color: $text-color;
+  }
+  .services-content {
+    @include flex-center;
+    @include myMediaQueries(small) {
+      flex-direction: column;
+      place-content: center;
+      width: 100%;
+    }
+    @include myMediaQueries(mobile) {
+      place-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+    .parag {
+      text-align: left;
+      font-size: 1.5rem;
+      color: $white-color;
+      flex: 1;
+      @include myMediaQueries(small) {
+        text-align: center;
+      }
+      @include myMediaQueries(mobile) {
+        text-align: center;
+      }
+    }
+    .img {
+      flex: 1;
+      width: 40rem;
+      height: 40rem;
+      @include myMediaQueries(small) {
+        width: 20rem;
+        height: 20rem;
+      }
+      @include myMediaQueries(mobile) {
+        width: 20rem;
+        height: 20rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

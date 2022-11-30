@@ -19,7 +19,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background-color: $background-color !important;
   line-height: 2 !important;
-  // background-image: url("../../assets/bg-texture.png");
+  // background-image: url("../images/bg-texture.png");
   color: $white-color !important;
 }
 
@@ -37,7 +37,7 @@ code {
 .container {
   width: $container-width-lg;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto;
   @include myMediaQueries(large) {
     width: $container-width-lg;
   }

@@ -24,7 +24,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(114, 63, 152, 0.4);
+  background-color: rgba(212, 80, 248, 0.5);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -119,6 +119,11 @@ html {
   height: 35rem;
   margin: 0 auto;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .header .img {
+    width: 70%;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header .img {
@@ -238,6 +243,9 @@ html {
   gap: 20px;
   width: 100%;
 }
+.about .title h2 {
+  color: rgba(100, 7, 187, 0.933);
+}
 .about .about-content {
   display: flex;
   justify-content: space-between;
@@ -295,13 +303,32 @@ html {
   width: 100%;
 }
 .about .about-content .text .icons div {
-  background-color: rgba(227, 219, 219, 0.5);
   flex: 1;
+  height: 15rem;
+  padding: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  border: 2px solid rgba(100, 7, 187, 0.933);
+  background-color: rgba(227, 219, 219, 0.5);
+  color: rgba(100, 7, 187, 0.933);
+  font-size: 20px;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.about .about-content .text .icons div:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.about .about-content .text .icons div:hover {
+  border: 2px solid rgb(114, 63, 152);
 }
 .about .about-content .text .icons div i {
   padding: 10px;
@@ -368,8 +395,8 @@ html {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
 }
@@ -406,12 +433,12 @@ html {
   height: 100%;
   gap: 20px;
 }
+.experience h2 {
+  color: rgba(100, 7, 187, 0.933);
+}
 .experience .content {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 30px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -434,34 +461,49 @@ html {
 }
 .experience .content .front-end,
 .experience .content .back-end {
-  background-color: rgba(227, 219, 219, 0.5);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   padding: 10px;
   flex: 1;
   height: 500px;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .experience .content .front-end,
+.experience .content .back-end {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .experience .content .front-end,
+.experience .content .back-end {
+    width: 100%;
+  }
+}
 .experience .content .front-end h2,
 .experience .content .back-end h2 {
-  color: rgb(114, 63, 152);
+  color: #fff;
 }
 .experience .content .front-end .skills,
 .experience .content .back-end .skills {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 300px));
+  grid-template-columns: repeat(3, minmax(100px, 300px));
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
-  gap: 20px;
+  gap: 3rem;
+  place-content: center;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .experience .content .front-end .skills,
+.experience .content .back-end .skills {
+    gap: 3rem;
+    grid-template-columns: repeat(2, minmax(100px, 300px));
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .experience .content .front-end .skills,
 .experience .content .back-end .skills {
-    grid-template-columns: minmax(100px, 300px);
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(100px, 300px));
   }
 }
 @media (max-width: 767px) {
@@ -472,23 +514,349 @@ html {
 }
 .experience .content .front-end .skills .skill,
 .experience .content .back-end .skills .skill {
-  padding-left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid rgba(100, 7, 187, 0.933);
+  background-color: rgba(227, 219, 219, 0.5);
+  color: rgba(100, 7, 187, 0.933);
+  font-size: 20px;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  border: 2px solid transparent;
+  background-color: rgba(241, 233, 233, 0.8);
+  padding: 10px;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  color: rgba(11, 2, 24, 0.6);
+}
+.experience .content .front-end .skills .skill:hover,
+.experience .content .back-end .skills .skill:hover {
+  border: 2px solid rgb(114, 63, 152);
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+@media (max-width: 767px) {
+  .experience .content .front-end .skills .skill,
+.experience .content .back-end .skills .skill {
+    width: 18rem;
+  }
 }
 .experience .content .front-end .skills .skill .skill-title,
 .experience .content .back-end .skills .skill .skill-title {
   display: flex;
   justify-content: center;
   gap: 10px;
-  align-items: flex-end;
+  align-items: center;
 }
 .experience .content .front-end .skills .skill .skill-title i,
 .experience .content .back-end .skills .skill .skill-title i {
-  font-size: 30px;
+  font-size: 2.5rem;
   color: rgb(114, 63, 152);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@keyframes left-to-right {
+  0% {
+    width: 0;
+    visibility: visible;
+    color: transparent;
+  }
+  50% {
+    width: 50%;
+    visibility: visible;
+  }
+  100% {
+    width: 100%;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes left-to-right {
+  /*
+  @content :for this => not only the name is dynamically added but
+   also, the properties to be changed.
+   */
+  0% {
+    width: 0;
+    visibility: visible;
+    color: transparent;
+  }
+  50% {
+    width: 50%;
+    visibility: visible;
+  }
+  100% {
+    width: 100%;
+    visibility: visible;
+  }
+}
+@keyframes right-to-left {
+  visibility: visible;
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+    visibility: visible;
+    color: transparent;
+  }
+  100% {
+    width: 0;
+    visibility: visible;
+    color: transparent;
+  }
+}
+@-webkit-keyframes right-to-left {
+  /*
+  @content :for this => not only the name is dynamically added but
+   also, the properties to be changed.
+   */
+  visibility: visible;
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+    visibility: visible;
+    color: transparent;
+  }
+  100% {
+    width: 0;
+    visibility: visible;
+    color: transparent;
+  }
+}
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.portfolio h2 {
+  color: rgba(100, 7, 187, 0.933);
+}
+.portfolio .projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 300px));
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  place-content: center;
+  gap: 2rem;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .portfolio .projects {
+    gap: 3rem;
+    grid-template-columns: repeat(2, minmax(100px, 300px));
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .projects {
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(100px, 300px));
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .projects {
+    grid-template-columns: minmax(100px, 300px);
+  }
+}
+.portfolio .projects .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: rgba(241, 233, 233, 0.8);
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+}
+.portfolio .projects .project:hover {
+  box-shadow: 2px 10px 10px 2px rgb(238, 225, 247);
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+.portfolio .projects .project .img {
+  flex: 1;
+  position: relative;
+}
+.portfolio .projects .project .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.portfolio .projects .project .img::after {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  content: attr(data-technologies);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  background-color: rgba(212, 80, 248, 0.5);
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  animation: right-to-left 0.3s linear forwards;
+  -webkit-animation: right-to-left 0.3s linear forwards;
+}
+.portfolio .projects .project .img:hover::after {
+  animation: left-to-right 0.3s linear forwards;
+  -webkit-animation: left-to-right 0.3s linear forwards;
+}
+.portfolio .projects .project p {
+  flex: 1;
+  text-align: center;
+  color: rgba(100, 7, 187, 0.933);
+  font-size: 25px;
+}
+.portfolio .projects .project .btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.portfolio .projects .project .btns > button {
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid rgba(100, 7, 187, 0.933);
+  background-color: rgba(227, 219, 219, 0.5);
+  color: rgba(100, 7, 187, 0.933);
+  font-size: 20px;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  border-color: transparent;
+  padding: 5px;
+  background-color: rgb(218, 188, 243);
+}
+.portfolio .projects .project .btns > button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.portfolio .projects .project .btns > button a {
+  text-decoration: none;
+  color: rgba(100, 7, 187, 0.933);
+}
+.portfolio .projects .project .btns > button:hover {
+  border-color: rgb(114, 63, 152);
+}
+
+.services {
+  text-align: center;
+}
+.services h2 {
+  padding-top: 30px;
+  color: rgba(100, 7, 187, 0.933);
+}
+.services .services-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .services-content {
+    flex-direction: column;
+    place-content: center;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .services .services-content {
+    place-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.services .services-content .parag {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #fff;
+  flex: 1;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .services-content .parag {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .services .services-content .parag {
+    text-align: center;
+  }
+}
+.services .services-content .img {
+  flex: 1;
+  width: 40rem;
+  height: 40rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .services-content .img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 767px) {
+  .services .services-content .img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+.services .services-content .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {
@@ -514,13 +882,13 @@ code {
 }
 
 .container {
-  width: 75%;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 @media (min-width: 1200px) {
   .container {
-    width: 75%;
+    width: 100%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {

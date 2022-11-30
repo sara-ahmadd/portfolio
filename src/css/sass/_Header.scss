@@ -47,6 +47,9 @@
     margin: 0 auto;
     position: relative;
 
+    @include myMediaQueries(large) {
+      width: 70%;
+    }
     @include myMediaQueries(small) {
       width: 100%;
     }
