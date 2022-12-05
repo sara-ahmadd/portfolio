@@ -1,0 +1,23 @@
+@use "./mixins/mixins" as *;
+@use "./global/variables" as *;
+@use "./global/global-rules" as *;
+
+.scroll {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: none;
+  background-color: $text-bcg;
+  text-align: center;
+  padding-top: 10px;
+  a {
+    i {
+      font-size: 4rem;
+      color: $text-color;
+    }
+  }
+}

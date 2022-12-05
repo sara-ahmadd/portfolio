@@ -2,6 +2,8 @@
 @use "./global/variables" as *;
 @use "./global/global-rules" as *;
 
+
+
 .experience {
   display: flex;
   flex-direction: column;
@@ -34,7 +36,6 @@
       height: 500px;
       display: flex;
       flex-direction: column;
-      // background-color: $white-color-varient;
 
       @include myMediaQueries(small) {
         width: 100%;
@@ -63,7 +64,7 @@
           grid-template-columns: minmax(100px, 300px);
         }
         .skill {
-          padding: 20px;
+          padding: 10px;
           @include border-radius-10px;
           border: 2px solid $text-color;
           background-color: $text-bcg;
@@ -77,14 +78,14 @@
           }
           background-color: $white-color-varient;
           padding: 10px;
-          width: 20rem;
+          height: 7rem;
           @include myMediaQueries(mobile) {
             width: 18rem;
           }
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
+          align-items: center;
           color: $dim-white-color;
           .skill-title {
             display: flex;

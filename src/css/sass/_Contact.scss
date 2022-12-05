@@ -1,3 +1,134 @@
 @use "./mixins/mixins" as *;
 @use "./global/variables" as *;
 @use "./global/global-rules" as *;
+
+@include myKeyFrames(rotate-y) {
+  0% {
+    @include rotateY-50;
+  }
+  50% {
+    @include rotateY-0;
+  }
+  100% {
+    @include rotateY-50;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  position: relative;
+  .title {
+    @include flex-center;
+    justify-content: center;
+    align-items: flex-end;
+    h2 {
+      color: $text-color;
+    }
+    .img {
+      padding-bottom: 4px;
+      img {
+        width: 100%;
+        height: 80%;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    @include myMediaQueries(medium) {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+    @include myMediaQueries(small) {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+    @include myMediaQueries(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+    .right {
+      flex: 1;
+      form {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        input,
+        textarea {
+          width: 100%;
+          @include border-radius-10px;
+          color: $text-color;
+          padding: 20px;
+          border: none;
+          font-size: 1.2rem;
+          &:focus {
+            outline: none;
+          }
+        }
+        input[type="submit"] {
+          @include lets-talk-btn;
+          width: 60%;
+          align-self: center;
+        }
+      }
+    }
+    .left {
+      flex: 1;
+      position: relative;
+      height: 30rem;
+      width: 25rem;
+      img {
+        width: 100%;
+        height: 100%;
+        animation: rotate-y 5s linear infinite;
+        @include drop-shadow;
+        -webkit-animation: rotate-y 5s linear infinite;
+      }
+
+      @include myMediaQueries(medium) {
+        display: none;
+      }
+      @include myMediaQueries(small) {
+        display: none;
+      }
+      @include myMediaQueries(mobile) {
+        display: none;
+      }
+    }
+    .social {
+      a {
+        padding: 0 1rem;
+      }
+      @include myMediaQueries(large) {
+        display: none;
+      }
+      @include myMediaQueries(medium) {
+        display: none;
+      }
+    }
+  }
+  .up-btn {
+    position: absolute;
+    margin-bottom: 1rem;
+    bottom: 0;
+    left: 100%;
+    @include myMediaQueries(small) {
+      display: none;
+    }
+    @include myMediaQueries(mobile) {
+      display: none;
+    }
+  }
+}

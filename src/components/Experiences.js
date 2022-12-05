@@ -42,7 +42,7 @@ const Experiences = () => {
     ],
   };
   return (
-    <div className="container experience">
+    <div className="container experience" id="experience">
       <Fade direction="left">
         <h2>My Experience</h2>
       </Fade>
@@ -50,7 +50,7 @@ const Experiences = () => {
         <div className="front-end">
           <div className="title">
             <Fade direction="right">
-              <h2>Front-end Development</h2>
+              <h2>Front-end Development Skills</h2>
             </Fade>
           </div>
           <div className="skills">

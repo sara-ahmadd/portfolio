@@ -6,7 +6,8 @@
 @use "./sass/_Navbar";
 @use "./sass/_Portfolio";
 @use "./sass/_Services";
-@use "./sass/_Testimonials";
+@use "./sass/_SocialMedia";
+@use "./sass//ScrollBtn";
 @use "./sass/mixins/_mixins" as *;
 @use "./sass/global/_variables" as *;
 @use "./sass/global/global-rules" as *;
@@ -32,12 +33,19 @@ code {
 .App {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .container {
   width: $container-width-lg;
   text-align: center;
-  margin: 30px auto;
+  margin: 2rem auto;
+  padding: 2rem 0;
+  height: fit-content;
+  @include myMediaQueries(x-large) {
+    width: 100%;
+    margin: 5rem auto;
+  }
   @include myMediaQueries(large) {
     width: $container-width-lg;
   }

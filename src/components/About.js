@@ -7,7 +7,7 @@ import { Bounce, Fade } from "react-awesome-reveal";
 
 const About = () => {
   return (
-    <div className="container about">
+    <div className="container about" id="about">
       <div className="title">
         <Fade direction="left">
           <h2>About Me</h2>
@@ -26,14 +26,18 @@ const About = () => {
                 <i>
                   <FcBarChart />
                 </i>
-                <h3>Experience</h3>
+                <h3>
+                  <a href="#experience">Experience</a>
+                </h3>
                 <h5>+One Year Working</h5>
               </div>
               <div>
                 <i>
                   <FcBullish />
                 </i>
-                <h3>Projects</h3>
+                <h3>
+                  <a href="#portfolio">Projects</a>
+                </h3>
                 <h5>+30 Completed</h5>
               </div>
             </div>
@@ -44,7 +48,9 @@ const About = () => {
               nulla nisi veniam irure aute et aliquip id est elit dolor. Anim
               proident anim Lorem et dolore qui id ea.
             </p>
-            <button className="btn">Let's Talk</button>
+            <button className="btn">
+              <a href="#contact">Let's Talk</a>
+            </button>
           </div>
         </Bounce>
       </div>

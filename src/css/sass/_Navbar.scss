@@ -1,3 +1,31 @@
 @use "./mixins/mixins" as *;
 @use "./global/variables" as *;
 @use "./global/global-rules" as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  @include border-radius-10px;
+  background-color: $text-bcg;
+  li {
+    a {
+      display: block;
+      padding: 0 20px;
+      @include myMediaQueries(mobile) {
+        padding: 0 10px;
+      }
+      width: 100%;
+      height: 100%;
+      color: $text-color;
+      font-size: 1.7rem;
+      @include transition-(0.3s);
+      &:hover,
+      &.active {
+        border-top: 4px solid $main-color;
+        background-color: $light-color;
+      }
+    }
+  }
+}
