@@ -18,7 +18,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        
+        "service_qd9ulwk",
+        "template_qui9vos",
+        document.querySelector("form"),
+        "h2scLIzplBO7aOd4Q"
       )
       .then(
         (result) => {

@@ -22,9 +22,9 @@ const Services = () => {
             <p>
               I'm a front-end web developer who can build your website
               responsive UI for small and medium sized businesses. If you want a
-              portfolio, website to list your services or create an online store
-              , I can help you with pleasure. - I'm experienced in HTML5, CSS3,
-              JS(ES6), Bootstrap and ReactJs.
+              portfolio or a website to list your services, I can help you with
+              pleasure. - I'm experienced in HTML5, CSS3, JS(ES6), Bootstrap and
+              ReactJs.
             </p>
           </div>
         </Slide>

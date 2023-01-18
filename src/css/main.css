@@ -977,14 +977,17 @@ html {
   0% {
     width: 0;
     visibility: visible;
+    font-size: 1rem;
     color: transparent;
   }
   50% {
     width: 50%;
+    font-size: 1rem;
     visibility: visible;
   }
   100% {
     width: 100%;
+    font-size: 1.5rem;
     visibility: visible;
   }
 }
@@ -996,14 +999,17 @@ html {
   0% {
     width: 0;
     visibility: visible;
+    font-size: 1rem;
     color: transparent;
   }
   50% {
     width: 50%;
+    font-size: 1rem;
     visibility: visible;
   }
   100% {
     width: 100%;
+    font-size: 1.5rem;
     visibility: visible;
   }
 }
@@ -1014,10 +1020,12 @@ html {
   }
   50% {
     width: 50%;
+    font-size: 1rem;
     visibility: visible;
     color: transparent;
   }
   100% {
+    font-size: 0.8rem;
     width: 0;
     visibility: visible;
     color: transparent;
@@ -1034,10 +1042,12 @@ html {
   }
   50% {
     width: 50%;
+    font-size: 1rem;
     visibility: visible;
     color: transparent;
   }
   100% {
+    font-size: 0.8rem;
     width: 0;
     visibility: visible;
     color: transparent;
@@ -1103,8 +1113,9 @@ html {
   -o-transform: translateY(-20px);
 }
 .portfolio .projects .project .img {
-  flex: 1;
   position: relative;
+  width: 270px;
+  height: 150px;
 }
 .portfolio .projects .project .img img {
   width: 100%;
@@ -1114,6 +1125,8 @@ html {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .portfolio .projects .project .img::after {
   border-radius: 10px;

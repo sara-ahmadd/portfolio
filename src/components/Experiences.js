@@ -10,6 +10,7 @@ import { DiReact } from "react-icons/di";
 import { DiBootstrap } from "react-icons/di";
 import { DiSass } from "react-icons/di";
 import { DiNodejsSmall } from "react-icons/di";
+import { SiJquery, SiRedux } from "react-icons/si";
 import tailwindIcon from "../images/tailwind-logo.svg";
 import typescriptIcon from "../images/typescript-logo.svg";
 
@@ -25,8 +26,14 @@ const Experiences = () => {
         level: "Experienced",
         icon: <DiJavascript1 />,
       },
-      { skill: "ReactJs", level: "Experienced", icon: <DiReact /> },
+      {
+        skill: "jQuery",
+        level: "Intermediate",
+        icon: <SiJquery />,
+      },
       { skill: "Bootstrap", level: "Experienced", icon: <DiBootstrap /> },
+      { skill: "ReactJs", level: "Experienced", icon: <DiReact /> },
+      { skill: "Redux Toolkit", level: "Intrmediate", icon: <SiRedux /> },
       {
         skill: "Tailwind",
         level: "Intermediate",
