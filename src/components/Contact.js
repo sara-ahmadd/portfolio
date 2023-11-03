@@ -47,17 +47,17 @@ const Contact = () => {
 
   return (
     <div className="container contact" id="contact">
-      <Slide direction="left">
+      <Slide direction="left" triggerOnce={true}>
         <div className="title">
           <img src={mailIcon} alt="icon" />
           <h2>Contact Me</h2>
         </div>
       </Slide>
       <div className="content">
-        <Bounce className="left">
+        <Bounce className="left" triggerOnce={true}>
           <img src={pic} alt="img" />
         </Bounce>
-        <Slide direction="right" className="right">
+        <Slide direction="right" className="right" triggerOnce={true}>
           <form onSubmit={sendEmail}>
             <input
               type="text"

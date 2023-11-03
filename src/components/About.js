@@ -9,17 +9,17 @@ const About = () => {
   return (
     <div className="container about" id="about">
       <div className="title">
-        <Fade direction="left">
+        <Fade direction="left" triggerOnce={true}>
           <h2>About Me</h2>
         </Fade>
       </div>
       <div className="about-content">
-        <Bounce className="img">
+        <Bounce className="img" triggerOnce={true}>
           <div>
             <img src={about} alt="img" />
           </div>
         </Bounce>
-        <Bounce className="text">
+        <Bounce className="text" triggerOnce={true}>
           <div>
             <div className="icons">
               <div>
@@ -42,11 +42,12 @@ const About = () => {
               </div>
             </div>
             <p className="parag">
-              excepteur Lorem fugiat cillum cillum ea. Consequat deserunt amet
-              sit veniam consectetur incididunt minim. Excepteur exercitation
-              nulla exercitation proident cillum voluptate esse. Anim ut veniam
-              nulla nisi veniam irure aute et aliquip id est elit dolor. Anim
-              proident anim Lorem et dolore qui id ea.
+              I'm a frontend web developer, experienced in creating responsive
+              web applications UI. I've been studying and creating projects for
+              more than one year, working with HTML, CSS, Javascript, Bootstrap
+              ,Reactjs and other technologies. A knowledgeable programmer
+              seeking opportunities in software development to improve my skills
+              and learn new stuff.
             </p>
             <button className="btn">
               <a href="#contact">Let's Talk</a>

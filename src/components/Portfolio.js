@@ -1,57 +1,51 @@
 import React from "react";
 import "../css/main.css";
 import proj1 from "../images/project1.jpg";
-import proj2 from "../images/project2.jpg";
-import proj3 from "../images/project3.jpg";
+import ecommerce from "../images/ecommerce.jpg";
 import proj4 from "../images/project4.jpg";
 import proj5 from "../images/project5.jpg";
-import proj7 from "../images/project7.jpg";
 import proj8 from "../images/project8.jpg";
 import proj9 from "../images/project9.jpg";
-import proj10 from "../images/project10.jpg";
-import proj11 from "../images/project11.jpg";
+import linkedin from "../images/linkedin.jpg";
+import proj11 from "../images/react-ts-ecommerce.jpg";
 import proj12 from "../images/project12.jpg";
+import youtube from "../images/youtube_clone.jpg";
 
 import { Slide, Fade } from "react-awesome-reveal";
 
 const Portfolio = () => {
   const projects = [
     {
-      name: "Agency Landing Page",
-      image: proj5,
-      site: "https://realestate-landing-page-three.vercel.app/",
-      srcCode: "https://github.com/sara-ahmadd/agency-landing-page",
-      technologies: "Built with HTML, CSS(SCSS), JS , Jquery & Bootstrap",
+      name: "Ecommerce Application",
+      image: ecommerce,
+      site: "https://ecommerceapp-sara-app.surge.sh/",
+      srcCode: " https://github.com/sara-ahmadd/advanced-ecommerce-app",
+      technologies:
+        "Built With ReactJs, Bootstrap, Firebase, Redux Toolkit, Sass(SCSS)",
     },
     {
-      name: "Landing Page",
-      image: proj1,
-      site: "http://landing-page-sara-app.surge.sh/",
-      srcCode: "https://github.com/sara-ahmadd/html-css-template3",
-      technologies: "Built with HTML & CSS",
+      name: "Ecommerce App",
+      image: proj11,
+      site: "https://ts-react-ecommerce-app.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/ts-react-ecommerce-app",
+      technologies:
+        "Built with ReactJs, TailwindCSS, Typescript, SwiperJs, SweetAlert",
     },
     {
-      name: "Landing page",
-      image: proj9,
-      site: "https://bank-landingpage.surge.sh/",
-      srcCode: "https://github.com/sara-ahmadd/bank-landing-page",
-      technologies: "Built with : ReactJs, Tailwind",
+      name: "Youtube Clone",
+      image: youtube,
+      site: "https://youtube-clone-sara-app.surge.sh/",
+      srcCode: " https://github.com/sara-ahmadd/youtube_clone",
+      technologies: "Built With ReactJs, SASS(SCSS), Youtube/V3 Api",
+    },
+    {
+      name: "Linked-In Clone",
+      image: linkedin,
+      site: "https://linkedin-clone-sara-app.surge.sh/",
+      srcCode: " https://github.com/sara-ahmadd/linkedin-clone",
+      technologies: "Built With ReactJs, Firebase, Redux, Styled components",
     },
 
-    {
-      name: "Landing Page",
-      image: proj7,
-      site: "https://sara-ahmadd.github.io/html-css-template-one/",
-      srcCode: "https://github.com/sara-ahmadd/html-css-template-one",
-      technologies: "Built with HTML & CSS",
-    },
-    {
-      name: "Quiz Application",
-      image: proj8,
-      site: "https://quiz-app-sara-app.vercel.app/",
-      srcCode: "https://github.com/sara-ahmadd/quiz-app",
-      technologies: "Built with HTML(PugJs), CSS(SCSS), JS",
-    },
     {
       name: "Menu Application",
       image: proj12,
@@ -60,33 +54,18 @@ const Portfolio = () => {
       technologies: "Built with HTML, CSS(SCSS), JS",
     },
     {
-      name: "Landing Page",
-      image: proj11,
-      site: "https://realestate-landing-page-sara-app.surge.sh/",
-      srcCode: "https://github.com/sara-ahmadd/realestate-landing-page",
+      name: "Landing page",
+      image: proj9,
+      site: "https://bank-landingpage.surge.sh/",
+      srcCode: "https://github.com/sara-ahmadd/bank-landing-page",
+      technologies: "Built with : ReactJs, Tailwind",
+    },
+    {
+      name: "HTML CSS Template",
+      image: proj1,
+      site: "http://landing-page-sara-app.surge.sh/",
+      srcCode: "https://github.com/sara-ahmadd/html-css-template3",
       technologies: "Built with HTML & CSS",
-    },
-
-    {
-      name: "Landing Page",
-      image: proj10,
-      site: "https://landing-page-temp2-sara-app.surge.sh",
-      srcCode: "https://github.com/sara-ahmadd/html-css-template2",
-      technologies: "Built with HTML, CSS",
-    },
-    {
-      name: "Shopping Cart",
-      image: proj2,
-      site: "https://shopping-cart-sara-app.surge.sh/",
-      srcCode: "https://github.com/sara-ahmadd/shopping-cart",
-      technologies: "Built with : HTML, CSS, JS",
-    },
-    {
-      name: "Online Store",
-      image: proj3,
-      site: "http://mystore-sara-app.surge.sh/",
-      srcCode: " https://github.com/sara-ahmadd/ecommerce-app",
-      technologies: "Built With ReactJs, Bootstrap",
     },
     {
       name: "Books Tracking App",
@@ -95,16 +74,35 @@ const Portfolio = () => {
       technologies: "Built With ReactJs",
       srcCode: " https://github.com/sara-ahmadd/my-reads",
     },
+    {
+      name: "Quiz Application",
+      image: proj8,
+      site: "https://quiz-app-sara-app.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/quiz-app",
+      technologies: "Built with HTML(PugJs), CSS(SCSS), JS",
+    },
+
+    {
+      name: "Agency Landing Page",
+      image: proj5,
+      site: "https://agency-landing-page-sara-app.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/agency-landing-page",
+      technologies: "Built with HTML, CSS(SCSS), JS & Jquery",
+    },
   ];
   return (
     <div className="container portfolio" id="portfolio">
-      <Fade direction="left">
+      <Fade direction="left" triggerOnce={true}>
         <h2>Projects</h2>
       </Fade>
       <div className="projects">
         {projects.map((x, ind) => {
           return (
-            <Slide key={x.image} direction={ind % 2 === 0 ? "left" : "right"}>
+            <Slide
+              key={x.image}
+              direction={ind % 2 === 0 ? "left" : "right"}
+              triggerOnce={true}
+            >
               <div className="project">
                 <div className="img" data-technologies={x.technologies}>
                   <img src={x.image} alt={x.name} />
@@ -117,7 +115,9 @@ const Portfolio = () => {
                     </a>
                   </button>
                   <button className="src-code">
-                    <a href={x.srcCode}>Source Code</a>
+                    <a href={x.srcCode} target="_blank" rel="noreferrer">
+                      Source Code
+                    </a>
                   </button>
                 </div>
               </div>

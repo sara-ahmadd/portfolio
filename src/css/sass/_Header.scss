@@ -23,6 +23,12 @@
     flex-wrap: wrap;
     .btn {
       @include lets-talk-btn;
+      &:nth-child(2) {
+        background-color: transparent;
+        &:hover {
+          background-color: $text-bcg;
+        }
+      }
       a {
         display: block;
         color: $text-color;

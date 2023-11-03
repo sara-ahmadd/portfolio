@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <div className="container header" id="header">
       <div>
-        <Slide direction="down" className="txt">
+        <Slide direction="down" className="txt" triggerOnce={true}>
           <div>
             <h4>Hello I'm</h4>
             <h1>Sara Ahmad</h1>
@@ -50,27 +50,23 @@ const Header = () => {
           </div>
         </Slide>
         <div className="btns-container">
-          <Slide direction="left">
-            <button className="btn">
-              <a
-                href={
-                  "https://drive.google.com/file/d/112_FQL_zZUw_El6xIlxjqm_ylkOpJRmQ/view?usp=share_link"
-                }
-                target="_blank"
-                rel="noreferrer"
-              >
-                Download CV
-              </a>
-            </button>
+          <Slide className="btn" direction="left" triggerOnce={true}>
+            <a
+              href={
+                "https://drive.google.com/file/d/112_FQL_zZUw_El6xIlxjqm_ylkOpJRmQ/view?usp=share_link"
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
+              Preview CV
+            </a>
           </Slide>
-          <Slide direction="right">
-            <button className="btn">
-              <a href="#contact">Let's Talk</a>
-            </button>
+          <Slide direction="right" triggerOnce={true} className="btn">
+            <a href="#contact">Let's Talk</a>
           </Slide>
         </div>
       </div>
-      <Fade direction="left">
+      <Fade direction="left" triggerOnce={true}>
         <div className="img">
           <img src={header} alt="img" />
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/main.css";
-import { Icon } from "@iconify/react";
-import html5 from "@iconify/icons-logos/html-5";
+// import { Icon } from "@iconify/react";
+// import html5 from "@iconify/icons-logos/html-5";
 import { DiCss3Full } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
 
@@ -33,16 +33,16 @@ const Experiences = () => {
       },
       { skill: "Bootstrap", level: "Experienced", icon: <DiBootstrap /> },
       { skill: "ReactJs", level: "Experienced", icon: <DiReact /> },
-      { skill: "Redux Toolkit", level: "Intrmediate", icon: <SiRedux /> },
+      { skill: "Redux Toolkit", level: "Experienced", icon: <SiRedux /> },
       {
         skill: "Tailwind",
-        level: "Intermediate",
+        level: "Experienced",
         icon: <img src={tailwindIcon} alt="img" />,
       },
       { skill: "Sass(SCSS)", level: "Experienced", icon: <DiSass /> },
       {
         skill: "TypeScript",
-        level: "Intermediate",
+        level: "Experienced",
         icon: <img src={typescriptIcon} alt="img" />,
       },
       { skill: "Node.js", level: "Basics", icon: <DiNodejsSmall /> },
@@ -50,20 +50,20 @@ const Experiences = () => {
   };
   return (
     <div className="container experience" id="experience">
-      <Fade direction="left">
+      <Fade direction="left" triggerOnce={true}>
         <h2>My Experience</h2>
       </Fade>
       <div className="content">
         <div className="front-end">
           <div className="title">
-            <Fade direction="right">
+            <Fade direction="right" triggerOnce={true}>
               <h2>Front-end Development Skills</h2>
             </Fade>
           </div>
           <div className="skills">
             {skills.front.map((x) => {
               return (
-                <Zoom direction="in" key={x.skill}>
+                <Zoom direction="in" key={x.skill} triggerOnce={true}>
                   <div className="skill">
                     <div className="skill-title">
                       <i>{x.icon}</i>

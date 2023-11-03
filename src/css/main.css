@@ -82,6 +82,12 @@ html {
   background-color: transparent;
   color: #fff;
 }
+.header .btns-container .btn:nth-child(2) {
+  background-color: transparent;
+}
+.header .btns-container .btn:nth-child(2):hover {
+  background-color: rgba(227, 219, 219, 0.5);
+}
 .header .btns-container .btn a {
   display: block;
   color: rgba(100, 7, 187, 0.933);
@@ -146,8 +152,7 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.5));
   -webkit-filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.5));
   left: 0;
@@ -157,8 +162,7 @@ html {
 }
 @media (min-width: 2500px) {
   .header .img img {
-    -o-object-fit: fill;
-       object-fit: fill;
+    object-fit: fill;
   }
 }
 .header .social {
@@ -204,8 +208,7 @@ html {
 .header .navbar {
   position: fixed;
   margin-bottom: 1rem;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   z-index: 30000;
   left: 50%;
   bottom: 0;
@@ -452,8 +455,7 @@ html {
   -o-border-radius: 10px;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   background-color: rgba(227, 219, 219, 0.5);
   filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.5));
   -webkit-filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.5));
@@ -477,12 +479,9 @@ html {
   -moz-transform: rotateZ(20deg);
   -ms-transform: rotateZ(20deg);
   -o-transform: rotateZ(20deg);
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes rotate-y {
@@ -741,13 +740,13 @@ html {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .experience .content .front-end,
-.experience .content .back-end {
+  .experience .content .back-end {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
   .experience .content .front-end,
-.experience .content .back-end {
+  .experience .content .back-end {
     width: 100%;
   }
 }
@@ -759,28 +758,27 @@ html {
 .experience .content .back-end .skills {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 300px));
-  grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
   gap: 3rem;
   place-content: center;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .experience .content .front-end .skills,
-.experience .content .back-end .skills {
+  .experience .content .back-end .skills {
     gap: 3rem;
     grid-template-columns: repeat(2, minmax(100px, 300px));
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .experience .content .front-end .skills,
-.experience .content .back-end .skills {
+  .experience .content .back-end .skills {
     gap: 2rem;
     grid-template-columns: repeat(2, minmax(100px, 300px));
   }
 }
 @media (max-width: 767px) {
   .experience .content .front-end .skills,
-.experience .content .back-end .skills {
+  .experience .content .back-end .skills {
     grid-template-columns: minmax(100px, 300px);
   }
 }
@@ -801,8 +799,8 @@ html {
   -moz-transition: 0.3s linear;
   -ms-transition: 0.3s linear;
   -o-transition: 0.3s linear;
-  border: 2px solid transparent;
-  background-color: rgba(241, 233, 233, 0.8);
+  border: 2px solid rgb(114, 63, 152);
+  background-color: transparent;
   padding: 10px;
   height: 7rem;
   display: flex;
@@ -811,18 +809,9 @@ html {
   align-items: center;
   color: rgba(11, 2, 24, 0.6);
 }
-.experience .content .front-end .skills .skill:hover,
-.experience .content .back-end .skills .skill:hover {
-  border: 2px solid rgb(114, 63, 152);
-  transform: translateY(-20px);
-  -webkit-transform: translateY(-20px);
-  -moz-transform: translateY(-20px);
-  -ms-transform: translateY(-20px);
-  -o-transform: translateY(-20px);
-}
 @media (max-width: 767px) {
   .experience .content .front-end .skills .skill,
-.experience .content .back-end .skills .skill {
+  .experience .content .back-end .skills .skill {
     width: 18rem;
   }
 }
@@ -835,7 +824,7 @@ html {
 }
 .experience .content .front-end .skills .skill .skill-title i,
 .experience .content .back-end .skills .skill .skill-title i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(114, 63, 152);
   display: flex;
   justify-content: space-between;
@@ -846,8 +835,6 @@ html {
 
 .footer {
   background-color: rgba(100, 7, 187, 0.933);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .footer .container {
@@ -940,8 +927,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -977,17 +962,17 @@ html {
   0% {
     width: 0;
     visibility: visible;
-    font-size: 1rem;
+    font-size: 0.6rem;
     color: transparent;
   }
   50% {
     width: 50%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     visibility: visible;
   }
   100% {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     visibility: visible;
   }
 }
@@ -999,17 +984,17 @@ html {
   0% {
     width: 0;
     visibility: visible;
-    font-size: 1rem;
+    font-size: 0.6rem;
     color: transparent;
   }
   50% {
     width: 50%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     visibility: visible;
   }
   100% {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     visibility: visible;
   }
 }
@@ -1020,12 +1005,12 @@ html {
   }
   50% {
     width: 50%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     visibility: visible;
     color: transparent;
   }
   100% {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
     width: 0;
     visibility: visible;
     color: transparent;
@@ -1042,12 +1027,12 @@ html {
   }
   50% {
     width: 50%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     visibility: visible;
     color: transparent;
   }
   100% {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
     width: 0;
     visibility: visible;
     color: transparent;
@@ -1064,7 +1049,6 @@ html {
 .portfolio .projects {
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 300px));
-  grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
   place-content: center;
   gap: 2rem;
@@ -1125,8 +1109,7 @@ html {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .portfolio .projects .project .img::after {
   border-radius: 10px;
@@ -1141,7 +1124,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #000;
   position: absolute;
@@ -1301,8 +1284,7 @@ html {
 .services .services-content .img img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.5));
   -webkit-filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.5));
 }
@@ -1369,8 +1351,6 @@ code {
   text-align: center;
   margin: 2rem auto;
   padding: 2rem 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 @media (min-width: 2500px) {
@@ -1399,4 +1379,6 @@ code {
     width: 100%;
     padding: 10px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

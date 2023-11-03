@@ -7,11 +7,11 @@ import { BiCodeAlt } from "react-icons/bi";
 const Services = () => {
   return (
     <div className="container services" id="services">
-      <Fade direction="left">
+      <Fade direction="left" triggerOnce={true}>
         <h2>Services</h2>
       </Fade>
       <div className="services-content">
-        <Slide direction="left" className="parag">
+        <Slide direction="left" className="parag" triggerOnce={true}>
           <div>
             <div className="title">
               <i>
@@ -28,7 +28,7 @@ const Services = () => {
             </p>
           </div>
         </Slide>
-        <Slide direction="right" className="img">
+        <Slide direction="right" className="img" triggerOnce={true}>
           <div>
             <img src={services} alt="img" />
           </div>
