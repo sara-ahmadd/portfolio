@@ -29,7 +29,7 @@ const About = () => {
                 <h3>
                   <a href="#experience">Experience</a>
                 </h3>
-                <h5>+Two Year Working</h5>
+                <h5>+Two Years Working</h5>
               </div>
               <div>
                 <i>
