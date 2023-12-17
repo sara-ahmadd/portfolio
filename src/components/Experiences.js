@@ -4,7 +4,7 @@ import "../css/main.css";
 // import html5 from "@iconify/icons-logos/html-5";
 import { DiCss3Full } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
-
+import { TbBrandNextjs } from "react-icons/tb";
 import { DiJavascript1 } from "react-icons/di";
 import { DiReact } from "react-icons/di";
 import { DiBootstrap } from "react-icons/di";
@@ -38,6 +38,11 @@ const Experiences = () => {
         skill: "Tailwind",
         level: "Experienced",
         icon: <img src={tailwindIcon} alt="img" />,
+      },
+      {
+        skill: "NextJS",
+        level: "Experienced",
+        icon: <TbBrandNextjs />,
       },
       { skill: "Sass(SCSS)", level: "Experienced", icon: <DiSass /> },
       {

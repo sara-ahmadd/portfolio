@@ -9,6 +9,7 @@ import proj9 from "../images/project9.jpg";
 import linkedin from "../images/linkedin.jpg";
 import proj11 from "../images/react-ts-ecommerce.jpg";
 import proj12 from "../images/project12.jpg";
+import onlineShop from "../images/online-shop.jpg";
 import youtube from "../images/youtube_clone.jpg";
 
 import { Slide, Fade } from "react-awesome-reveal";
@@ -16,20 +17,12 @@ import { Slide, Fade } from "react-awesome-reveal";
 const Portfolio = () => {
   const projects = [
     {
-      name: "Ecommerce Application",
-      image: ecommerce,
-      site: "https://ecommerceapp-sara-app.surge.sh/",
-      srcCode: " https://github.com/sara-ahmadd/advanced-ecommerce-app",
+      name: "Online Shop",
+      image: onlineShop,
+      site: "https://online-shop-nextjs.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/online-shop-nextjs",
       technologies:
-        "Built With ReactJs, Bootstrap, Firebase, Redux Toolkit, Sass(SCSS)",
-    },
-    {
-      name: "Ecommerce App",
-      image: proj11,
-      site: "https://ts-react-ecommerce-app.vercel.app/",
-      srcCode: "https://github.com/sara-ahmadd/ts-react-ecommerce-app",
-      technologies:
-        "Built with ReactJs, TailwindCSS, Typescript, SwiperJs, SweetAlert",
+        "Built with NextJs, TailwindCSS, Typescript, Next-Auth, MongoDB, bcrypt-ts",
     },
     {
       name: "Youtube Clone",
@@ -45,7 +38,14 @@ const Portfolio = () => {
       srcCode: " https://github.com/sara-ahmadd/linkedin-clone",
       technologies: "Built With ReactJs, Firebase, Redux, Styled components",
     },
-
+    {
+      name: "Ecommerce App",
+      image: proj11,
+      site: "https://ts-react-ecommerce-app.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/ts-react-ecommerce-app",
+      technologies:
+        "Built with ReactJs, TailwindCSS, Typescript, SwiperJs, SweetAlert",
+    },
     {
       name: "Menu Application",
       image: proj12,
@@ -81,7 +81,14 @@ const Portfolio = () => {
       srcCode: "https://github.com/sara-ahmadd/quiz-app",
       technologies: "Built with HTML(PugJs), CSS(SCSS), JS",
     },
-
+    {
+      name: "Ecommerce Application",
+      image: ecommerce,
+      site: "https://ecommerceapp-sara-app.surge.sh/",
+      srcCode: " https://github.com/sara-ahmadd/advanced-ecommerce-app",
+      technologies:
+        "Built With ReactJs, Bootstrap, Firebase, Redux Toolkit, Sass(SCSS)",
+    },
     {
       name: "Agency Landing Page",
       image: proj5,
