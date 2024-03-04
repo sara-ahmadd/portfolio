@@ -10,6 +10,7 @@ import linkedin from "../images/linkedin.jpg";
 import proj11 from "../images/react-ts-ecommerce.jpg";
 import proj12 from "../images/project12.jpg";
 import onlineShop from "../images/online-shop.jpg";
+import freshCart from "../images/freshCart.jpg";
 import books from "../images/bokks.jpg";
 import youtube from "../images/youtube_clone.jpg";
 
@@ -18,12 +19,11 @@ import { Slide, Fade } from "react-awesome-reveal";
 const Portfolio = () => {
   const projects = [
     {
-      name: "Books Tracker",
-      image: books,
-      site: "https://sara-ahmad-books-tracker.vercel.app/",
-      srcCode: "https://github.com/sara-ahmadd/books-tracker",
-      technologies:
-        "Built with NextJs, TailwindCSS, Typescript, Next-Auth, MongoDB, bcrypt-ts",
+      name: "Fresh Cart",
+      image: freshCart,
+      site: "https://fresh-cart-final-route.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/fresh-cart-final-route",
+      technologies: "Built with Angular16, Bootstrap, sweet-alert",
     },
     {
       name: "Online Shop",
@@ -33,6 +33,15 @@ const Portfolio = () => {
       technologies:
         "Built with NextJs, TailwindCSS, Typescript, Next-Auth, MongoDB, bcrypt-ts",
     },
+    {
+      name: "Books Tracker",
+      image: books,
+      site: "https://sara-ahmad-books-tracker.vercel.app/",
+      srcCode: "https://github.com/sara-ahmadd/books-tracker",
+      technologies:
+        "Built with NextJs, TailwindCSS, Typescript, Next-Auth, MongoDB, bcrypt-ts",
+    },
+
     {
       name: "Youtube Clone",
       image: youtube,
