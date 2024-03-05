@@ -13,6 +13,7 @@ import { DiNodejsSmall } from "react-icons/di";
 import { SiJquery, SiRedux } from "react-icons/si";
 import tailwindIcon from "../images/tailwind-logo.svg";
 import typescriptIcon from "../images/typescript-logo.svg";
+import { IoLogoAngular } from "react-icons/io";
 
 import { Zoom, Fade } from "react-awesome-reveal";
 
@@ -49,6 +50,11 @@ const Experiences = () => {
         skill: "TypeScript",
         level: "Experienced",
         icon: <img src={typescriptIcon} alt="img" />,
+      },
+      {
+        skill: "Angular 2+",
+        level: "Experienced",
+        icon: <IoLogoAngular />,
       },
       { skill: "Node.js", level: "Basics", icon: <DiNodejsSmall /> },
     ],
